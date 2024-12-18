@@ -1,0 +1,116 @@
+@use "reset";
+@use "mixins";
+
+body {
+  font-family: Roboto, serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  background-color: #EEEFF1;
+  margin-bottom: 112px;
+
+  &__navbar--list {
+    @include flex-center(row, 42px);
+    padding: 80px 0;
+
+    .navbar__list--item {
+      a {
+        color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+
+        &:hover {
+          color: #34547A;
+        }
+      }
+    }
+  }
+}
+
+.description {
+  padding: 82px 0;
+
+  h1 {
+    @include responsive-text(48px);
+    font-weight: 500;
+    padding-bottom: 60px;
+  }
+
+  &__about {
+    width: 540px;
+    color: #727272;
+    padding-bottom: 65px;
+    letter-spacing: 0.05em;
+    line-height: 26px;
+  }
+
+  &__button {
+    background-color: #34547A;
+    border: none;
+    padding: 20px 41px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+.dark__background {
+  background-color: #34547A;
+  height: 250px;
+}
+
+.main__projectlist {
+  @include flex-center(row, 45px);
+  padding: 100px 0;
+  color: #FFFFFF;
+
+  &--item {
+    height: 50px;
+    width: 141px;
+    background: left no-repeat url("../images/group.png");
+    padding-left: 70px;
+    @include responsive-text(21px, 25px);
+  }
+}
+
+.projectlist__works--project {
+  @include responsive-text(16px, null, 0.05em);
+}
+
+.main__item--text {
+  display: none;
+}
+
+.video {
+  margin: -43px 0 100px;
+
+  &-link {
+    display: none;
+  }
+}
+
+.copyright {
+  padding-top: 50px;
+  color: white;
+
+  &__head {
+    font-weight: 500;
+    @include responsive-text(21px, 25px);
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include responsive-text(13px, 21px);
+
+  }
+}
+
+@import "media";
