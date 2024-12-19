@@ -1,18 +1,10 @@
-@mixin flex-center($direction: row, $gap: 0) {
+@mixin flex-center {
   display: flex;
-  flex-direction: $direction;
-  gap: $gap;
   justify-content: center;
   align-items: center;
 }
 
-@mixin responsive-text($size, $line-height: 1.5) {
-  font-size: $size;
+@mixin responsive-text($font-size, $line-height: 1.5) {
+  font-size: $font-size;
   line-height: $line-height;
-}
-
-@mixin container {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 15px;
 }

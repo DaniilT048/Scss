@@ -1,75 +1,66 @@
-@use "mixins";
-
 @media (max-width: 1159px) {
   body {
     font-size: 16px;
   }
-
-  .dark__background {
+  main .dark__background {
     height: 700px;
   }
-
   .main__projectlist {
-    @include flex-center(column);
-
-    &--item {
-      width: auto;
-    }
+    flex-direction: column;
   }
-
+  .main__item--text {
+    display: inline;
+    font-size: 16px;
+  }
+  .main__projectlist--item {
+    width: auto;
+  }
   .video {
     display: none;
-
-    &-link {
-      display: block;
-      @include responsive-text(25px);
-      text-align: center;
-      margin: -43px 0 100px;
-    }
+  }
+  .video-link {
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: -43px;
   }
 }
 
-// Для экранов до 699px
 @media (max-width: 699px) {
   body {
     font-size: 14px;
   }
-
   .header__navbar--list {
-    @include flex-center(column);
+    flex-direction: column;
   }
-
-  .description {
-    h1 {
-      width: 375px;
-    }
-
-    &__about {
-      width: 300px;
-      @include responsive-text(14px, 1.6);
-    }
-
-    &__button {
-      padding: 10px 20px;
-    }
+  .description h1 {
+    width: 375px;
   }
-
+  .description__about {
+    width: 300px;
+    line-height: 22px;
+  }
+  .description__button {
+    padding: 10px 20px;
+  }
   .dark__background {
     height: 700px;
   }
-
   .main__projectlist {
-    @include flex-center(column);
+    flex-direction: column;
   }
-
+  .main__item--text {
+    display: none;
+  }
   .video {
     display: none;
-
-    &-link {
-      display: block;
-      @include responsive-text(25px);
-      text-align: center;
-      margin: -43px 0 100px;
-    }
+  }
+  .video-link {
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: -43px;
   }
 }
